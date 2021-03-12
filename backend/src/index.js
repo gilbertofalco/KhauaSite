@@ -6,7 +6,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
-
+require('./controllers/authController')(app)
 
 app.get('/', (req, res) => {
     res.send('funcionando')
@@ -20,5 +20,5 @@ app.use(express.static(__dirname + '/frontend'))
 const port = 3001
 
 app.listen(port, () =>{
-    console.log('servre running on localhost:', port)
+    console.log('serve running on localhost:', port)
 })
