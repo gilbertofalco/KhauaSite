@@ -17,7 +17,7 @@ class App extends Component {
     axios
       .get('/comments/teste')
       .then(result => {
-        console.log(result)
+    
       })
   }
 
