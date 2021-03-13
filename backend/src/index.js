@@ -6,7 +6,8 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
-require('./controllers/authController')(app)
+require('./app/controllers/index')(app)
+
 
 app.get('/', (req, res) => {
     res.send('funcionando')
