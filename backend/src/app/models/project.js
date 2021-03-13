@@ -7,6 +7,10 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
+    subtitle: {
+        type: String,
+        require: true,
+    },
     text: {
         type: String,
         require: true,
@@ -16,11 +20,6 @@ const ProjectSchema = new mongoose.Schema({
         ref: 'User',
         require: true,
     },
-    tasks: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Task',
-    }],
-
     createdAt: {
         type: Date,
         default: Date.now,
