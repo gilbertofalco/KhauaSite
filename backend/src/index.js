@@ -13,8 +13,7 @@ app.get('/', (req, res) => {
     res.send('funcionando')
 })
 
-const routes = require('./routes')
-app.use('/api', routes)
+
 
 app.use(express.static(__dirname + '/frontend'))
 
